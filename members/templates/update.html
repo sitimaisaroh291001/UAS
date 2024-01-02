@@ -1,0 +1,30 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
+    </head>
+    <body>
+    <div class="container-update ">
+        <div class="container2">
+            <h1>Update Member</h1>
+            <br>
+            <form action="{% url 'uprec' mem.id %}" method="post">
+                {% csrf_token %}
+                <label for="">Nama</label><br><br>
+                <input type="text" name="input1" value="{{mem.input1}}"><br><br>
+                <label for="">Tempat,Tanggal Lahir</label><br><br>
+                <input type="text" name="input2" value="{{mem.input2}}"><br><br>
+                <label for="">Alamat</label><br><br>
+                <input type="text" name="input3" value="{{mem.input3}}"><br><br>
+                <button type="submit" id="new1">Update</button>
+            </form>
+        </div>
+    </div>
+   
+</body>
+</html>

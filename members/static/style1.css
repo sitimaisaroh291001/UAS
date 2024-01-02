@@ -6,30 +6,19 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('https://vervalyayasan.data.kemdikbud.go.id/upload/file/64/649E/551443-6264910959728601495.jpg');
-    background-size: 70;
-    background-position: center;
-    color: #fff; /* Set text color to white for better contrast on the background image */
+    color: #333; /* Set text color to a dark shade for better readability */
 }
 
+/* Wrapper Styles */
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /* Navigation Styles */
-.navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-}
-
-.logo {
-    /* Add styles for the logo */
-}
-
 .menu {
-    /* Add styles for the menu items */
+    background-color: greenyellow;
+    padding: 15px 0;
 }
 
 .menu ul {
@@ -43,7 +32,7 @@ body {
 }
 
 .tbl-biru {
-    /* Add styles for the blue link */
+    color: blue;
 }
 
 /* Section Styles */
@@ -52,19 +41,26 @@ section {
     text-align: center;
 }
 
-.section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
 .kolom {
     /* Add styles for the columns */
+    color: #fff;
+}
+
+/* Partner List Styles */
+.partner-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.kartu-partner, .kartu-tutor {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Footer Styles */
 .contact {
-    background-color: #222;
-    color: #fff;
+    background-color: #180202;
     padding: 40px 0;
 }
 
@@ -78,26 +74,20 @@ section {
     margin-right: 40px;
 }
 
-/* Add media queries for responsiveness */
-@media (max-width: 768px) {
-    .menu {
-        display: none; /* Hide the menu on small screens initially */
-    }
-
-    .menu.active {
-        display: flex; /* Display the menu when active on small screens */
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1;
-    }
-
-    .menu li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
+/* Copy Right Styles */
+#CopyRight {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
+
+/* Menu Section Background Image */
+#Menu {
+    background-image: url('https://vervalyayasan.data.kemdikbud.go.id/upload/file/64/649E/551443-6264910959728601495.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Set text color to a light shade for better readability */
+    padding: 80px 0;
+}
+

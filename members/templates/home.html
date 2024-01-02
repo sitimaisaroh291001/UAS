@@ -7,34 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ppsi</title>
     <link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
     <html>
 </head>
-<body style="background-image: url('https://vervalyayasan.data.kemdikbud.go.id/upload/file/64/649E/551443-6264910959728601495.jpg')" width="70%"></body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
         <div class="wrapper">
             <div class="logo"><a href="PPSI Teja Timur Pamekasan"></a></div>
-            <div class="menu" style="background-color: black;">
+            <div class="menu" style="background-color: greenyellow;">
                 <ul>
-                    <li><img src="{% static 'image/logo.png' %}" width="7%"></li>
+                    <li><img src="{% static 'image/logo.png' %}" width="10%"></li>
                     <li><a href="#Menu">Menu</a></li>
                     <li><a href="#Profil">Profil</a></li>
                     <li><a href="#Ekstrakulikuler">Ekstrakulikuler</a></li>
-                    <li><a href="#Akun">Akun</a></li>
+                    <li><a href="#Kontak">Kontak</a></li>
                     <li><a href=""class="tbl-biru">+62852-5932-0096</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
 </html>
+
     <div class="wrapper">
         <!--untuk home-->
         <section id="Menu">
             <img src="{% static 'image/logo.png' %}" width="10%">
-            <style></style>
             <div class="kolom">
                 <p class="Deskripsi"></p>
-                <h2>Sabilul Ihsan</h2>
+                <h2> Pendaftaran Santri Baru PP. Sabilul Ihsan</h2>
             </div>
+        </section>
+
+        <section id="Pendaftaran">
+            <div class="container-crud">
+        
+                <table id="customers" border="1">
+                    <thead>
+                        <th>Id</th>
+                        <th>Nama</th>
+                        <th>Tempat,Tanggal Lahir</th>
+                        <th>Alamat</th>
+                        <th colspan="2" id="mid">Action</th>
+                    </thead>
+                    {% for x in mem %}
+                    <tr>
+                        <td>{{x.id}}</td>
+                        <td>{{x.input1}}</td>
+                        <td>{{x.input2}}</td>
+                        <td>{{x.input3}}</td>
+                        <td>
+                            <a href="update/{{x.id}}"><button id="up">update</button></a>
+                        </td>
+                        <td>
+                            <a href="delete/{{x.id}}"><button id="del">delete</button></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <br><br>
+                <a href="{% url 'add' %}"><button id="new3">Add Member</button></a>
+            </div> 
+            
+           
         </section>
 
         <!--untuk cources-->
@@ -76,21 +108,17 @@
         <div class="wrapper">
             <div class="footer">
                 <div class="footer-section">
-                    <h3>Tentang Sekolah</h3>
-                    <p>Sekolah Tatakrama SMP_SMA Sabilul Ihsan merupakan sekolah yang didirikan pada tahun 2004 yang mana ...................................</p>
-                </div>
-                <div class="footer-section">
                     <h3>Alamat</h3>
                     <p> JL. RAYA JALMAK 150 TEJA TIMUR, -, Kec. Pamekasan, Kab. Pamekasan Prov. Jawa Timur</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Kontak</h3>
+                    <h3>Akun</h3>
                     <pre>
-                        <p><a href="https://www.youtube.com/@sabilulihsan3118/" style="color: rgb(10, 10, 10);"><i class="fa fa-Youtube large">Youtube</i></a>
+                        <p><a href="https://www.youtube.com/@sabilulihsan3118/" style="color: blue"><i class="fa fa-Youtube large">Youtube</i></a>
                         <a href=""></a></p>
                     </pre>
                     <pre>
-                        <p><a href="https://www.facebook.com/profile.php?id=100011596244048&mibextid=5NY4jEj8SVMV44HD " style="color:  rgb(10, 10, 10);"><i class="fa fa-Facebook">Facebook</i></a>
+                        <p><a href="https://www.facebook.com/profile.php?id=100011596244048&mibextid=5NY4jEj8SVMV44HD " style="color: blue"><i class="fa fa-Facebook">Facebook</i></a>
                         <a href=""></a></p>
                     </pre>
                 </div>
