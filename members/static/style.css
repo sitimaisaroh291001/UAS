@@ -1,70 +1,77 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset some default styles for better cross-browser consistency */
+
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+/* Add background color to the menu */
+.menu-background {
+    background-color: #3498db; /* Replace with your desired background color */
+    transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
 }
 
-nav {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-nav .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-nav .menu ul {
-    list-style: none;
-    display: flex;
-}
-
-nav .menu ul li {
-    margin-right: 20px;
-}
-
-nav .menu ul li a {
-    color: white;
-    text-decoration: none;
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://vervalyayasan.data.kemdikbud.go.id/upload/file/64/649E/551443-6264910959728601495.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Set text color to white for better contrast on the background image */
 }
 
 .wrapper {
-    max-width: 960px;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#Menu img {
-    max-width: 100%;
-    height: auto;
+/* Navigation Styles */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
 }
 
-.kolom {
-    width: 50%;
-    float: left;
+.logo {
+    /* Add styles for the logo */
 }
 
-#Profil h2,
-#Ekstrakulikuler h2 {
-    color: #333;
+.menu {
+    /* Add styles for the menu items */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 20px;
 }
 
 .tbl-biru {
-    color: #007bff;
+    /* Add styles for the blue link */
 }
 
+/* Section Styles */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.kolom {
+    /* Add styles for the columns */
+}
+
+/* Footer Styles */
 .contact {
-    background-color: #f0f0f0;
-    padding: 20px 0;
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
 }
 
 .footer {
@@ -73,12 +80,30 @@ nav .menu ul li a {
 }
 
 .footer-section {
-    width: 30%;
+    flex: 1;
+    margin-right: 40px;
 }
 
-#Copy {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the menu on small screens initially */
+    }
+
+    .menu.active {
+        display: flex; /* Display the menu when active on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
