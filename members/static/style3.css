@@ -1,68 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+/* Gaya Dasar */
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
 
-        #Profil {
-            text-align: center;
-            padding: 20px;
-        }
+/* Gaya untuk Bagian Profil */
 
-        .kolom {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
+#Profil {
+    text-align: center;
+    padding: 20px;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
+.kolom {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
 
-        h2 {
-            color: #333;
-        }
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
+h2 {
+    color: #333;
+}
 
-        .tbl-biru {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <!--untuk cources-->
-    <section id="Profil">
-        <div class="kolom">
-            <img src="{% static 'image/pengasuh.png' %}" alt="">
-            <p class="dekripsi"></p>
-            <h2>Profil</h2>
-            <img src="" alt="">
-            <p>Pondok Pesantren Sabilul Ihsan Teja Timur Pamekasan, merupakan salah satu Pondok Pesantren yang berada di Kabupaten Pamekasan yang tepatnya berada di Desa Teja Timur Pamekasan. </p>
-            <p><a href="" class="tbl-biru">Pelajari lebih lanjut</a></p> 
-        </div>
-    </section>
-</body>
-</html>
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.tbl-biru {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Gaya Responsif */
+
+@media only screen and (max-width: 600px) {
+    .kolom {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+}
