@@ -18,6 +18,9 @@ def members(request):
 def add(request):
     return render (request,'add.html')
 
+def profil(request):
+  return render(request, 'profil.html')
+  
 def addrec(request):
     x=request.POST['input1']
     y=request.POST['input2']
