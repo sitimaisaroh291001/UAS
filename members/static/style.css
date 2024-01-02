@@ -1,13 +1,7 @@
 /* Reset some default styles for better cross-browser consistency */
-
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-}
-/* Add background color to the menu */
-.menu-background {
-    background-color: #3498db; /* Replace with your desired background color */
-    transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
 }
 
 body {
@@ -30,12 +24,8 @@ body {
     padding: 15px 0;
 }
 
-.logo {
-    /* Add styles for the logo */
-}
-
 .menu {
-    /* Add styles for the menu items */
+    background-color: green; /* Add background color to the menu */
 }
 
 .menu ul {
@@ -50,17 +40,13 @@ body {
 
 .tbl-biru {
     /* Add styles for the blue link */
+    color: blue;
 }
 
 /* Section Styles */
 section {
     padding: 80px 0;
     text-align: center;
-}
-
-.section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
 }
 
 .kolom {
